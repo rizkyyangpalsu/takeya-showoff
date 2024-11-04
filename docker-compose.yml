@@ -1,0 +1,30 @@
+version: "3.8"
+
+networks:
+  backend:
+
+services:
+  core:
+    build:
+      context: .
+      args:
+        - USER_CONTAINER=dokar
+        - PUID=1000
+        - PGID=1000
+    restart: unless-stopped
+    depends_on:
+      - db
+    volumes:
+      # laravel comes up with public dir inside workdir, so we will mount only /var/www
+      - ./:/var/www
+    networks:
+      - backend
+  db:
+    image: timescale/timescaledb:2.1.0-pg13
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    networks:
+      - backend

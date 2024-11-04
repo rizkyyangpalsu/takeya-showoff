@@ -1,0 +1,62 @@
+<?php
+
+namespace App\Actions\Departure\Accounting\Cost;
+
+use App\Models\Accounting\Journal;
+use App\Models\Departure;
+use App\Models\Office\Staff;
+use App\Concerns\BasicResponse;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Validation\ValidationException;
+use Lorisleiva\Actions\ActionRequest;
+use Lorisleiva\Actions\Concerns\AsAction;
+use App\Jobs\Accounting\Journal\CreateNewJournal;
+
+class CreateNewDepartureCombinedCost extends HandleDepartureCostForm
+{
+    use AsAction, BasicResponse;
+
+    /**
+     * @param array $input
+     * @param Departure\Combined $combined
+     * @param Staff $staff
+     * @return Journal
+     * @throws ValidationException
+     */
+    public function handle(array $input, Departure\Combined $combined, Staff $staff): Journal
+    {
+        $data = $this->mapIntoJournalEntries($input);
+
+        $job = new CreateNewJournal($data, $staff, $combined);
+
+        dispatch_sync($job);
+
+        $job->journal->note = trans('tiara.note.departure.cost', [
+            'name' => $combined->name,
+        ]);
+
+        $job->journal->save();
+
+        return $job->journal;
+    }
+
+    /**
+     * @param ActionRequest $request
+     * @param Departure $departure
+     * @return JsonResponse
+     * @throws ValidationException
+     */
+    public function asController(ActionRequest $request, Departure\Combined $combined): JsonResponse
+    {
+        $inputs = $request->validated();
+
+        $staff = $request->user() instanceof Staff ? $request->user() : Staff::byHash(Staff::idToHash($request->user()->id));
+
+        $journal = $this->handle($inputs, $combined, $staff);
+
+        $combined->total_costs += collect($inputs['expenses'])->sum('amount');
+        $combined->save();
+
+        return $this->success($journal->toArray());
+    }
+}

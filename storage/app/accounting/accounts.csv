@@ -1,0 +1,133 @@
+code,description,type_code,group_code,group_description,is_cash,branch
+10000,Kas,ASSET,,,1,1
+10001,Rekening Bank,ASSET,,,1,1
+10002,Giro,ASSET,,,1,1
+10200,Piutang Usaha,ASSET,,,1,1
+10300,Piutang Lainnya,ASSET,,,1,1
+10301,Piutang Karyawan,ASSET,,,1,1
+10400,Dana Belum Disetor,ASSET,,,1,1
+10401,Aset Lancar Lainnya,ASSET,,,1,1
+10402,Kas Jalan,ASSET,,,1,1
+10403,Uang Muka,ASSET,,,1,1
+10500,PPN Masukan,ASSET,,,1,1
+10501,Pajak Dibayar Di Muka - PPh 22,ASSET,,,1,1
+10502,Pajak Dibayar Di Muka - PPh 23,ASSET,,,1,1
+10503,Pajak Dibayar Di Muka - PPh 25,ASSET,,,1,1
+10700,Aset Tetap - Tanah,ASSET,,,1,0
+10701,Aset Tetap - Bangunan,ASSET,,,1,0
+10702,Aset Tetap - Building Improvements,ASSET,,,1,0
+10703,Aset Tetap - Kendaraan,ASSET,,,1,0
+10704,Aset Tetap - Mesin & Peralatan,ASSET,,,1,0
+10705,Aset Tetap - Perlengkapan Kantor,ASSET,,,1,0
+10706,"Aset Tetap - Aset Sewa Guna Usaha
+",ASSET,,,0,0
+10707,Aset Tak Berwujud,ASSET,,,0,0
+10708,Hak Merek Dagang,ASSET,,,0,0
+10709,Hak Cipta,ASSET,,,0,0
+10709,Good Will,ASSET,,,0,0
+10800,Akumulasi Penyusutan - Bangunan,ASSET,,,0,0
+10801,Akumulasi Penyusutan - Building Improvements,ASSET,,,0,0
+10802,Akumulasi penyusutan - Kendaraan,ASSET,,,0,0
+10803,Akumulasi Penyusutan - Mesin & Peralatan,ASSET,,,0,0
+10804,Akumulasi Penyusutan - Peralatan Kantor,ASSET,,,0,0
+10805,Akumulasi Penyusutan - Aset Sewa Guna Usaha,ASSET,,,0,0
+10806,Akumulasi Amortisasi,ASSET,,,1,0
+10807,Akumulasi Amortisasi : Hak Merek Dagang,ASSET,,,0,0
+10808,Akumulasi Amortisasi : Hak Cipta,ASSET,,,0,0
+10809,Akumulasi Amortisasi : Good Will,ASSET,,,0,0
+10900,Investasi,ASSET,,,1,0
+20100,Hutang Usaha,LIABILITY,,,1,1
+20101,Hutang Belum Ditagih,LIABILITY,,,1,1
+20102,Hutang Lain Lain,LIABILITY,,,1,1
+20103,Hutang Gaji,LIABILITY,,,1,1
+20104,Hutang Deviden,LIABILITY,,,1,0
+20106,Sarana Kantor Terhutang,LIABILITY,,,1,1
+20107,Bunga Terhutang,LIABILITY,,,1,1
+20108,Biaya Terhutang Lainnya,LIABILITY,,,1,1
+20109,Hutang Bank,LIABILITY,,,1,1
+20200,PPN Keluaran,LIABILITY,,,1,1
+20201,Hutang Pajak - PPh 21,LIABILITY,,,1,1
+20202,Hutang Pajak - PPh 22,LIABILITY,,,1,1
+20203,Hutang Pajak - PPh 23,LIABILITY,,,1,1
+20204,Hutang Pajak - PPh 29,LIABILITY,,,1,1
+20205,Hutang Pajak Lainnya,LIABILITY,,,1,1
+20206,Hutang dari Pemegang Saham,LIABILITY,,,1,0
+20300,Kewajiban Lancar Lainnya,LIABILITY,,,1,1
+30400,Modal Saham,EQUITY,,,1,0
+30401,Tambahan Modal Disetor,EQUITY,,,1,0
+30402,Laba Ditahan,EQUITY,,,1,0
+30403,Deviden,EQUITY,,,1,0
+30404,Pendapatan Komprehensif Lainnya,EQUITY,,,1,0
+30405,Ekuitas Saldo Awal,EQUITY,,,1,0
+40000,Pendapatan Jalan,REVENUE,,,1,1
+40001,Pendapatan Tiket,REVENUE,,,1,1
+40101,Pendapatan Belum Ditagih,REVENUE,,,1,1
+50000,Diskon Jasa,EXPENSE,,,1,1
+50001,Biaya Proyek,EXPENSE,,,1,1
+60002,Biaya Penjualan,EXPENSE,,,1,1
+60003,Iklan & Promosi,EXPENSE,,,1,1
+60004,Komisi & Fee,EXPENSE,,,1,1
+60005,"Bensin, Tol dan Parkir - Penjualan",EXPENSE,,,1,1
+60006,Perjalanan Dinas - Penjualan,EXPENSE,,,1,1
+60007,Komunikasi - Penjualan,EXPENSE,,,1,1
+60008,Marketing Lainnya,EXPENSE,,,1,1
+60009,Pengembalian Tiket,EXPENSE,,,1,1
+60100,Biaya Umum & Administratif,EXPENSE,,,1,1
+60101,Gaji,EXPENSE,,,1,1
+60102,Upah,EXPENSE,,,1,1
+60103,Makanan & Transportasi,EXPENSE,,,1,1
+60104,Lembur,EXPENSE,,,1,1
+60105,Pengobatan,EXPENSE,,,1,1
+60106,THR & Bonus,EXPENSE,,,1,1
+60107,Jamsostek,EXPENSE,,,1,1
+60108,Insentif,EXPENSE,,,1,1
+60109,Pesangon,EXPENSE,,,1,1
+60110,Donasi,EXPENSE,,,1,1
+60111,Hiburan,EXPENSE,,,1,1
+60112,"Bensin, Tol dan Parkir - Umum",EXPENSE,,,1,1
+60113,Perbaikan & Pemeliharaan,EXPENSE,,,1,1
+60114,Perjalanan Dinas - Umum,EXPENSE,,,1,1
+60115,Makanan,EXPENSE,,,1,1
+60116,Komunikasi - Umum,EXPENSE,,,1,1
+60117,Iuran & Langganan,EXPENSE,,,1,1
+60118,Asuransi,EXPENSE,,,1,1
+60119,Legal & Profesional,EXPENSE,,,1,1
+60120,Beban Manfaat Karyawan,EXPENSE,,,1,1
+60121,Sarana Kantor,EXPENSE,,,1,1
+60122,Pelatihan & Pengembangan,EXPENSE,,,1,1
+60123,Beban Piutang Tak Tertagih,EXPENSE,,,1,1
+60124,Pajak dan Perizinan,EXPENSE,,,1,1
+60125,Denda,EXPENSE,,,1,1
+60126,Listrik,EXPENSE,,,1,1
+60127,Air,EXPENSE,,,1,1
+60128,Langganan Software,EXPENSE,,,1,1
+60129,Beban Kantor,EXPENSE,,,1,1
+60130,Alat Tulis Kantor & Printing,EXPENSE,,,1,1
+60131,Bea Materai,EXPENSE,,,1,1
+60132,Keamanan dan Kebersihan,EXPENSE,,,1,1
+60133,Supplies dan Material,EXPENSE,,,1,1
+60134,Pemborong,EXPENSE,,,1,1
+60135,Biaya Sewa - Bangunan,EXPENSE,,,1,1
+60136,Biaya Sewa - Kendaraan,EXPENSE,,,1,1
+60137,Biaya Sewa - Operasional,EXPENSE,,,1,1
+60138,Biaya Sewa - Lain - lain,EXPENSE,,,1,1
+60200,Penyusutan - Bangunan,EXPENSE,,,0,0
+60201,Penyusutan - Perbaikan Bangunan,EXPENSE,,,0,0
+60202,Penyusutan - Kendaraan,EXPENSE,,,0,0
+60203,Penyusutan - Mesin & Peralatan,EXPENSE,,,0,0
+60204,Penyusutan - Peralatan Kantor,EXPENSE,,,0,0
+60205,Penyusutan - Aset Sewa Guna Usaha,EXPENSE,,,0,0
+60300,Amortisasi : Hak Merek Dagang,EXPENSE,,,0,0
+60301,Amortisasi : Hak Cipta,EXPENSE,,,0,0
+60302,Amortisasi : Good Will,EXPENSE,,,0,0
+70000,Pendapatan Bunga - Bank,REVENUE,,,1,1
+70001,Pendapatan Bunga - Deposito,REVENUE,,,1,1
+70100,Pembulatan,REVENUE,,,1,0
+70101,Pendapatan Lain - lain,REVENUE,,,1,1
+80000,Beban Bunga,EXPENSE,,,1,1
+80101,Provisi,EXPENSE,,,1,0
+80202,(Laba)/Rugi Pelepasan Aset Tetap,EXPENSE,,,1,0
+80303,Beban Lain - lain,EXPENSE,,,1,1
+90000,Beban Pajak - Kini,EXPENSE,,,1,1
+90101,Beban Pajak - Tangguhan,EXPENSE,,,1,1
+50002,Beban Jalan,EXPENSE,,,1,1
